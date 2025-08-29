@@ -14,4 +14,7 @@ void main() {
   test("Should get 6 in case string is 1\n2,3", () {
     expect(add("1\n2,3"), 6);
   });
+  test("Should get 3 in case string is //;\n1;2", () {
+    expect(add("//;\n1;2"), 3);
+  });
 }
