@@ -17,4 +17,7 @@ void main() {
   test("Should get 3 in case string is //;\n1;2", () {
     expect(add("//;\n1;2"), 3);
   });
+  test("Show exception in case  string contains negative number", () {
+    expect(() => add('1,-2,3,-4'), throwsA(isA<Exception>()));
+  });
 }
